@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HunarMand</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Login</string>
+    <string name="hint_login_email">Email</string>
+    <string name="hint_login_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="msg_no_account">Don’t have an account? Sign Up</string>
+
+    <!-- Signup Screen -->
+    <string name="signup_title">Create Account</string>
+    <string name="hint_signup_full_name">Full Name</string>
+    <string name="hint_signup_email">Email</string>
+    <string name="hint_signup_phone">Phone</string>
+    <string name="hint_signup_password">Password</string>
+    <string name="hint_signup_confirm_password">Confirm Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="msg_have_account">Already have an account? Log In</string>
+</resources>

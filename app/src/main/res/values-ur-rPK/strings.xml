@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ہنر مند</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">لاگ ان</string>
+    <string name="hint_login_email">ای میل</string>
+    <string name="hint_login_password">پاس ورڈ</string>
+    <string name="btn_login">لاگ ان کریں</string>
+    <string name="msg_no_account">اکاؤنٹ نہیں ہے؟ سائن اپ کریں</string>
+
+    <!-- Signup Screen -->
+    <string name="signup_title">اکاؤنٹ بنائیں</string>
+    <string name="hint_signup_full_name">پورا نام</string>
+    <string name="hint_signup_email">ای میل</string>
+    <string name="hint_signup_phone">فون</string>
+    <string name="hint_signup_password">پاس ورڈ</string>
+    <string name="hint_signup_confirm_password">پاس ورڈ کی تصدیق کریں</string>
+    <string name="btn_signup">سائن اپ کریں</string>
+    <string name="msg_have_account">پہلے سے اکاؤنٹ ہے؟ لاگ ان کریں</string>
+</resources>
