@@ -130,6 +130,28 @@ Password: Admin@123
 
 ---
 
+## Authentication App Screenshots
+
+1. **Signup Screen**  
+   ![Signup Screen](screenshots/signup_screen.png)  
+   Displays the signup form with name, email, phone, password fields, and logo.
+
+2. **Login Screen**  
+   ![Login Screen](screenshots/login_screen.png)  
+   Shows the login form where users can enter email and password.
+
+3. **Forget Password Screens**  
+   ![Forget Password Screens](screenshots/forget_password_screen.png)  
+   Allows users to apply for retrieve their password.
+
+4. **Reset Password Screens**  
+   ![Reset Password Screens](screenshots/reset_password_screen.png)  
+   Allows users to reset their password.
+
+5. **Home / Landing Screen**  
+   ![Home Screen](screenshots/home_screen.png)  
+   Shows a welcome message after successful login.
+
 ## ✅ Assignment Notes
 
 - No database or Firebase used
