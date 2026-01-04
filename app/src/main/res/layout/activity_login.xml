@@ -51,4 +51,14 @@
         android:layout_marginTop="10dp"
         android:clickable="true"
         android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/tvForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"/>
+
 </LinearLayout>

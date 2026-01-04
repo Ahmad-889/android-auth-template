@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail, etPassword;
     private Button btnLogin;
-    private TextView tvSignupRedirect;
+    private TextView tvSignupRedirect, tvForget;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +31,19 @@ public class LoginActivity extends AppCompatActivity {
         // Handle login button click
         btnLogin.setOnClickListener(v -> {
             if (validateLogin()) {
-                Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                String email = etEmail.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
 
-                // TODO: Replace this with redirect to Dashboard/Main app screen
-                // For now, just redirect to SignupActivity to test flow
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-                startActivity(intent);
-                finish();
+                if (email.equals(AuthManager.EMAIL) &&
+                        password.equals(AuthManager.PASSWORD)) {
+
+                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, HomeActivity.class));
+                    finish();
+
+                } else {
+                    Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -48,6 +54,14 @@ public class LoginActivity extends AppCompatActivity {
         tvSignupRedirect.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
             startActivity(intent);
+        });
+
+        // Find the "Forget Password" TextView
+        TextView tvForget = findViewById(R.id.tvForgetPassword);
+
+        // Redirect to ForgetPasswordActivity when clicked
+        tvForget.setOnClickListener(v -> {
+            startActivity(new Intent(this, ForgetPasswordActivity.class));
         });
     }
 

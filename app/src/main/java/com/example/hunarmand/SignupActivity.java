@@ -34,9 +34,19 @@ public class SignupActivity extends AppCompatActivity {
         // Signup button click
         btnSignup.setOnClickListener(v -> {
             if (validateForm()) {
-                Toast.makeText(SignupActivity.this, "Signup successful!", Toast.LENGTH_SHORT).show();
+                String email = etEmail.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
 
-                // For now → just go to LoginActivity after signup
+                // ✅ Store new user credentials
+                AuthManager.EMAIL = email;
+                AuthManager.PASSWORD = password;
+                AuthManager.isUserRegistered = true;
+
+                Toast.makeText(SignupActivity.this,
+                        "Signup successful! Please login.",
+                        Toast.LENGTH_SHORT).show();
+
+                // Go to Login screen
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
@@ -87,7 +97,7 @@ public class SignupActivity extends AppCompatActivity {
         }
 
         // Phone validation (Pakistani format = 11 digits)
-        if (TextUtils.isEmpty(phone) || phone.length() <= 11) {
+        if (TextUtils.isEmpty(phone) || !phone.matches("\\d{11}")) {
             etPhone.setError("Enter a valid 11-digit phone number");
             etPhone.requestFocus();
             return false;
